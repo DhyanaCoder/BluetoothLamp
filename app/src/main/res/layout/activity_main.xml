@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/Command_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="开启蓝牙"/>
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/Command_get"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="关闭蓝牙"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/Command_disconnect"
+            android:layout_height="wrap_content"
+            android:text="断开连接"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/check_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="接收信息"/>
+    <Button
+        android:id="@+id/stop_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="暂停/继续 音乐"/>
+    <TextView
+        android:id="@+id/text_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="温馨提示：下拉可刷新"/>
+    <com.yalantis.phoenix.PullToRefreshView
+        android:id="@+id/pull_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+</com.yalantis.phoenix.PullToRefreshView>
+</LinearLayout>
